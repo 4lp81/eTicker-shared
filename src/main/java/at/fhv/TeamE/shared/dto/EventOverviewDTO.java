@@ -1,12 +1,13 @@
 package at.fhv.TeamE.shared.dto;
 
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.UUID;
 
 
-public class EventOverviewDTO {
+public class EventOverviewDTO implements Serializable {
     private final UUID eventId;
     private final String title;
     private final String location;
