@@ -8,12 +8,16 @@ import java.util.UUID;
 
 
 public class EventOverviewDTO implements Serializable {
-    private final UUID eventId;
-    private final String title;
-    private final String location;
-    private final String description;
-    private final String date;
-    private final double price;
+    private UUID eventId;
+    private String title;
+    private String location;
+    private String description;
+    private String date;
+    private double price;
+
+    public EventOverviewDTO(){
+
+    }
 
     public EventOverviewDTO(UUID eventId, String title, String location, String description, String date, double price) {
         this.eventId = eventId;
@@ -24,27 +28,27 @@ public class EventOverviewDTO implements Serializable {
         this.price = price;
     }
 
-    public UUID eventId() {
+    public UUID EventId() {
         return eventId;
     }
 
-    public String title() {
+    public String Title() {
         return title;
     }
 
-    public String location() {
+    public String Location() {
         return location;
     }
 
-    public String description() {
+    public String Description() {
         return description;
     }
 
-    public String date() {
+    public String Date() {
         return date;
     }
 
-    public double price() {
+    public double Price() {
         return price;
     }
 
@@ -61,4 +65,3 @@ public class EventOverviewDTO implements Serializable {
         return Objects.hash(eventId, title, location, description, date, price);
     }
 }
-
