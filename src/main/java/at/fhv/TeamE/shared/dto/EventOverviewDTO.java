@@ -28,27 +28,27 @@ public class EventOverviewDTO implements Serializable {
         this.price = price;
     }
 
-    public UUID EventId() {
+    public UUID getEventId() {
         return eventId;
     }
 
-    public String Title() {
+    public String getTitle() {
         return title;
     }
 
-    public String Location() {
+    public String getLocation() {
         return location;
     }
 
-    public String Description() {
+    public String getDescription() {
         return description;
     }
 
-    public String Date() {
+    public String getDate() {
         return date;
     }
 
-    public double Price() {
+    public double getPrice() {
         return price;
     }
 
