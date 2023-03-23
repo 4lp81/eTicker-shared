@@ -11,10 +11,10 @@ public class EventOverviewDTO {
     private final String title;
     private final String location;
     private final String description;
-    private final LocalDate date;
+    private final String date;
     private final double price;
 
-    public EventOverviewDTO(UUID eventId, String title, String location, String description, LocalDate date, double price) {
+    public EventOverviewDTO(UUID eventId, String title, String location, String description, String date, double price) {
         this.eventId = eventId;
         this.title = title;
         this.location = location;
@@ -39,7 +39,7 @@ public class EventOverviewDTO {
         return description;
     }
 
-    public LocalDate date() {
+    public String date() {
         return date;
     }
 
