@@ -11,7 +11,10 @@ public class SaleDTO implements Serializable {
     private final double price;
     private int amountPurchased;
 
-    //Random Comment weil java fx zahlen ned mag
+    public SaleDTO(){
+
+    }
+
     public SaleDTO(UUID saleId, UUID productId, String eventName, double price, int amountPurchased) {
         this.saleId = saleId;
         this.productId = productId;
@@ -19,6 +22,10 @@ public class SaleDTO implements Serializable {
         this.price = price;
         this.amountPurchased = amountPurchased;
     }
+
+    //Random Comment weil java fx zahlen ned mag
+
+
 
     public UUID getSaleId() {
         return saleId;
