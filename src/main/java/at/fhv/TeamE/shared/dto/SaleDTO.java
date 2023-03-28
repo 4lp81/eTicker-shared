@@ -11,9 +11,6 @@ public class SaleDTO implements Serializable {
     private final double price;
     private int amountPurchased;
 
-    public SaleDTO(){
-
-    }
 
     public SaleDTO(UUID saleId, UUID productId, String eventName, double price, int amountPurchased) {
         this.saleId = saleId;
