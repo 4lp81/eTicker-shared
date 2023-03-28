@@ -6,5 +6,6 @@ import java.util.List;
 import java.util.UUID;
 
 public interface RMI_SaleService {
+    //
     void purchase(UUID customerId, List<SaleDTO> salesDTO);
 }
