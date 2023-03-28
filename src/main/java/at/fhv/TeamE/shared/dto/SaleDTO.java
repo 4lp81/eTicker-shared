@@ -27,7 +27,7 @@ public class SaleDTO implements Serializable {
         this.amountRefunded = amountRefunded;
     }
 
-    //Random Comment weil java fx zahlen ned mag
+    //Random Comment weil java fx zahlen ned mag!!
 
 
 
