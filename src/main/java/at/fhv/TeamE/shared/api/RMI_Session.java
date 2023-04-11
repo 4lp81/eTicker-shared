@@ -4,6 +4,8 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface RMI_Session extends Remote {
+
+    //ToDo: Add messaging in later stages
     String username() throws RemoteException;
     RMI_CustomerService rmi_customerService() throws RemoteException;
 
