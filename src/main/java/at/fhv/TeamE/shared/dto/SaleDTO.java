@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class SaleDTO implements Serializable {
     private UUID saleId;
-    private UUID productId;
+    private UUID eventId;
     private String eventName;
     private double price;
     private int amountPurchased;
@@ -18,16 +18,16 @@ public class SaleDTO implements Serializable {
     }
 
 
-    public SaleDTO(UUID saleId, UUID productId, String eventName, double price, int amountPurchased, int amountRefunded) {
+    public SaleDTO(UUID saleId, UUID eventId, String eventName, double price, int amountPurchased, int amountRefunded) {
         this.saleId = saleId;
-        this.productId = productId;
+        this.eventId = eventId;
         this.eventName = eventName;
         this.price = price;
         this.amountPurchased = amountPurchased;
         this.amountRefunded = amountRefunded;
     }
 
-    //Random Comment weil java fx zahlen ned mag!!
+    //Random Comment weil java fx zahlen ned mag omg..^!!!!!!
 
 
 
@@ -36,7 +36,7 @@ public class SaleDTO implements Serializable {
     }
 
     public UUID getProductId() {
-        return productId;
+        return eventId;
     }
 
     public String getEventName() {
@@ -60,11 +60,11 @@ public class SaleDTO implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaleDTO saleDTO = (SaleDTO) o;
-        return Double.compare(saleDTO.price, price) == 0 && amountPurchased == saleDTO.amountPurchased && amountRefunded == saleDTO.amountRefunded && saleId.equals(saleDTO.saleId) && productId.equals(saleDTO.productId) && eventName.equals(saleDTO.eventName);
+        return Double.compare(saleDTO.price, price) == 0 && amountPurchased == saleDTO.amountPurchased && amountRefunded == saleDTO.amountRefunded && saleId.equals(saleDTO.saleId) && eventId.equals(saleDTO.eventId) && eventName.equals(saleDTO.eventName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(saleId, productId, eventName, price, amountPurchased, amountPurchased);
+        return Objects.hash(saleId, eventId, eventName, price, amountPurchased, amountPurchased);
     }
 }
