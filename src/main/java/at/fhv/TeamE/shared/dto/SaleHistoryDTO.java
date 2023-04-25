@@ -6,6 +6,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class SaleHistoryDTO implements Serializable {
+    private UUID saleId;
     private UUID customerId;
     private String firstName;
     private String lastName;
@@ -22,7 +23,8 @@ public class SaleHistoryDTO implements Serializable {
 
     }
 
-    public SaleHistoryDTO(UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, List<SaleDTO> saleDTO) {
+    public SaleHistoryDTO(UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, List<SaleDTO> saleDTO) {
+        this.saleId = saleId;
         this.customerId = customerId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,6 +36,10 @@ public class SaleHistoryDTO implements Serializable {
         this.country = country;
         this.saleDate = saleDate;
         this.saleDTO = saleDTO;
+    }
+
+    public UUID getSaleId() {
+        return saleId;
     }
 
     public UUID getCustomerId() {
@@ -85,11 +91,11 @@ public class SaleHistoryDTO implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaleHistoryDTO that = (SaleHistoryDTO) o;
-        return customerId.equals(that.customerId) && firstName.equals(that.firstName) && lastName.equals(that.lastName) && iban.equals(that.iban) && birthDate.equals(that.birthDate) && email.equals(that.email) && address.equals(that.address) && city.equals(that.city) && country.equals(that.country) && saleDate.equals(that.saleDate) && saleDTO.equals(that.saleDTO);
+        return saleId.equals(that.saleId) && customerId.equals(that.customerId) && firstName.equals(that.firstName) && lastName.equals(that.lastName) && iban.equals(that.iban) && birthDate.equals(that.birthDate) && email.equals(that.email) && address.equals(that.address) && city.equals(that.city) && country.equals(that.country) && saleDate.equals(that.saleDate) && saleDTO.equals(that.saleDTO);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(customerId, firstName, lastName, iban, birthDate, email, address, city, country, saleDate, saleDTO);
+        return Objects.hash(saleId,customerId, firstName, lastName, iban, birthDate, email, address, city, country, saleDate, saleDTO);
     }
 }
