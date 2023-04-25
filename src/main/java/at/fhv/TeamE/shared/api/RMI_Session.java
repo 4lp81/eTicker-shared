@@ -11,4 +11,7 @@ public interface RMI_Session extends Remote {
 
     RMI_EventService rmi_eventService() throws RemoteException;
     RMI_SaleService rmi_saleService() throws RemoteException;
+
+    RMI_MessageConsumerService rmi_messageConsumerService() throws RemoteException;
+    RMI_MessagePublisherService rmi_messagePublisherService() throws RemoteException;
 }
