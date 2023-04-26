@@ -100,7 +100,7 @@ public class SaleHistoryDTO implements Serializable {
         return amount;
     }
 
-    //
+    // test
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
