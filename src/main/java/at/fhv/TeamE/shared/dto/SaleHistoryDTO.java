@@ -17,13 +17,17 @@ public class SaleHistoryDTO implements Serializable {
     private String city;
     private String country;
     private String saleDate;
-    private List<SaleDTO> saleDTO;
+    private String salePrice;
+    private String eventName;
+    private int amount;
+
+
 
     public SaleHistoryDTO() {
 
     }
 
-    public SaleHistoryDTO(UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, List<SaleDTO> saleDTO) {
+    public SaleHistoryDTO(UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, String salePrice, String eventName, int amount) {
         this.saleId = saleId;
         this.customerId = customerId;
         this.firstName = firstName;
@@ -35,7 +39,9 @@ public class SaleHistoryDTO implements Serializable {
         this.city = city;
         this.country = country;
         this.saleDate = saleDate;
-        this.saleDTO = saleDTO;
+        this.salePrice = salePrice;
+        this.eventName = eventName;
+        this.amount = amount;
     }
 
     public UUID getSaleId() {
@@ -82,8 +88,16 @@ public class SaleHistoryDTO implements Serializable {
         return saleDate;
     }
 
-    public List<SaleDTO> getSaleDTO() {
-        return saleDTO;
+    public String getSalePrice() {
+        return salePrice;
+    }
+
+    public String getEventName() {
+        return eventName;
+    }
+
+    public int getAmount() {
+        return amount;
     }
 
     @Override
@@ -91,11 +105,11 @@ public class SaleHistoryDTO implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaleHistoryDTO that = (SaleHistoryDTO) o;
-        return saleId.equals(that.saleId) && customerId.equals(that.customerId) && firstName.equals(that.firstName) && lastName.equals(that.lastName) && iban.equals(that.iban) && birthDate.equals(that.birthDate) && email.equals(that.email) && address.equals(that.address) && city.equals(that.city) && country.equals(that.country) && saleDate.equals(that.saleDate) && saleDTO.equals(that.saleDTO);
+        return amount == that.amount && saleId.equals(that.saleId) && customerId.equals(that.customerId) && firstName.equals(that.firstName) && lastName.equals(that.lastName) && iban.equals(that.iban) && birthDate.equals(that.birthDate) && email.equals(that.email) && address.equals(that.address) && city.equals(that.city) && country.equals(that.country) && saleDate.equals(that.saleDate) && salePrice.equals(that.salePrice) && eventName.equals(that.eventName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(saleId,customerId, firstName, lastName, iban, birthDate, email, address, city, country, saleDate, saleDTO);
+        return Objects.hash(saleId, customerId, firstName, lastName, iban, birthDate, email, address, city, country, saleDate, salePrice, eventName, amount);
     }
 }
