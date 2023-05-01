@@ -24,7 +24,6 @@ public class SaleHistoryDTO implements Serializable {
     private SaleDTO sales;
 
     public SaleHistoryDTO() {
-
     }
 
     public SaleHistoryDTO( UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, String salePrice, String eventName, int amount, UUID productId,SaleDTO sales) {
