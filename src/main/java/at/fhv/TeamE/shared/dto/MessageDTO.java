@@ -15,6 +15,8 @@ public class MessageDTO implements Serializable {
 
     }
 
+    //nix
+
     public MessageDTO(String topic, String title, String message, Timestamp timestamp) {
         this.topic = topic;
         this.title = title;
