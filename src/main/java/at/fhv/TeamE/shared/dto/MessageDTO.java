@@ -15,7 +15,7 @@ public class MessageDTO implements Serializable {
 
     }
 
-    //nix2
+    //nix3
 
     public MessageDTO(String topic, String title, String message, Timestamp timestamp) {
         this.topic = topic;
