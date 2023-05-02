@@ -15,11 +15,11 @@ public class MessageDTO implements Serializable {
 
     }
 
-    public MessageDTO(String topic, String title, String message) {
+    public MessageDTO(String topic, String title, String message, Timestamp timestamp) {
         this.topic = topic;
         this.title = title;
         this.message = message;
-        this.timestamp = new Timestamp(System.currentTimeMillis());
+        this.timestamp = timestamp;
     }
 
     public String getTopic() {
@@ -43,11 +43,11 @@ public class MessageDTO implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MessageDTO that = (MessageDTO) o;
-        return topic.equals(that.topic) && title.equals(that.title) && message.equals(that.message);
+        return Objects.equals(topic, that.topic) && Objects.equals(title, that.title) && Objects.equals(message, that.message) && Objects.equals(timestamp, that.timestamp);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(topic, title, message);
+        return Objects.hash(topic, title, message, timestamp);
     }
 }
