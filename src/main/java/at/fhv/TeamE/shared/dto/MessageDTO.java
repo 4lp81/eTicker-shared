@@ -1,12 +1,15 @@
 package at.fhv.TeamE.shared.dto;
 
 import java.io.Serializable;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 public class MessageDTO implements Serializable {
     private String topic;
     private String title;
     private String message;
+    private Timestamp timestamp;
 
     public MessageDTO() {
 
@@ -16,6 +19,7 @@ public class MessageDTO implements Serializable {
         this.topic = topic;
         this.title = title;
         this.message = message;
+        this.timestamp = new Timestamp(System.currentTimeMillis());
     }
 
     public String getTopic() {
@@ -28,6 +32,10 @@ public class MessageDTO implements Serializable {
 
     public String getMessage() {
         return message;
+    }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
     }
 
     @Override
