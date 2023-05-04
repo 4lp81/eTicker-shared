@@ -1,21 +1,27 @@
 package at.fhv.TeamE.shared.dto;
 
 import java.io.Serializable;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 public class MessageDTO implements Serializable {
     private String topic;
     private String title;
     private String message;
+    private Timestamp timestamp;
 
     public MessageDTO() {
 
     }
 
-    public MessageDTO(String topic, String title, String message) {
+    //nix3
+
+    public MessageDTO(String topic, String title, String message, Timestamp timestamp) {
         this.topic = topic;
         this.title = title;
         this.message = message;
+        this.timestamp = timestamp;
     }
 
     public String getTopic() {
@@ -30,16 +36,20 @@ public class MessageDTO implements Serializable {
         return message;
     }
 
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MessageDTO that = (MessageDTO) o;
-        return topic.equals(that.topic) && title.equals(that.title) && message.equals(that.message);
+        return Objects.equals(topic, that.topic) && Objects.equals(title, that.title) && Objects.equals(message, that.message) && Objects.equals(timestamp, that.timestamp);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(topic, title, message);
+        return Objects.hash(topic, title, message, timestamp);
     }
 }
