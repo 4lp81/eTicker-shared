@@ -11,7 +11,7 @@ public interface RMI_MessageConsumerService extends Remote {
     //ToDo: acknowledge message.....
     List<MessageDTO> getMessagesFromSubscribedTopics(String userName) throws RemoteException;
 
-    //Für notification
+    //Für notification und so
     void notifyUser(String userName, String message) throws RemoteException;
 
 }
