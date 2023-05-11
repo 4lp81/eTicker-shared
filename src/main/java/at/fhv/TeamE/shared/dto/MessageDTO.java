@@ -19,7 +19,7 @@ public class MessageDTO implements Serializable {
     //nix3
 
 
-    public MessageDTO(String topic, String title, String message, Timestamp timestamp) {
+    public MessageDTO(String topic, String title, String message, Timestamp timestamp, boolean isAcknowledged) {
         this.topic = topic;
         this.title = title;
         this.message = message;
