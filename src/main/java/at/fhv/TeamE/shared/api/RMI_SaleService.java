@@ -11,7 +11,7 @@ import java.util.UUID;
 public interface RMI_SaleService extends Remote {
     void purchase(UUID customerId, List<SaleDTO> salesDTO) throws RemoteException;
 
-    //ToDo: idk just to fix versionNR
+    //ToDo: idk just to fix versionNR...
     void refund(UUID customerId, UUID saleId, List<SaleDTO> salesDTO) throws RemoteException;
 
     List<SaleHistoryDTO> getById(String searchString) throws RemoteException;
