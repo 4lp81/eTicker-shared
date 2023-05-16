@@ -5,5 +5,5 @@ import java.rmi.RemoteException;
 import java.sql.Timestamp;
 
 public interface RMI_MessagePublisherService extends Remote {
-    void publish(String topic, String title, String message, Timestamp timestamp) throws RemoteException;
+    void publish(String topic, String title, String message, Timestamp timestamp, String username) throws RemoteException;
 }
