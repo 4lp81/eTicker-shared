@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface RMI_MessageConsumerService extends Remote {
 
-    //ToDo: acknowledge message.....
+    //ToDo: acknowledge message...
     List<MessageDTO> getMessagesFromSubscribedTopics(String userName) throws RemoteException;
 
     //Für notification und so
