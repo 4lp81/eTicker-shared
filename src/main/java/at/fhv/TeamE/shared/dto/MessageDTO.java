@@ -70,3 +70,5 @@ public class MessageDTO implements Serializable {
         return Objects.hash(topic, title, message, timestamp, isAcknowledged, userTag);
     }
 }
+
+//1
