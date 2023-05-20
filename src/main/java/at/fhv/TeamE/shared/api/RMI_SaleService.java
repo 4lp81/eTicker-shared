@@ -3,20 +3,20 @@ package at.fhv.TeamE.shared.api;
 import at.fhv.TeamE.shared.dto.SaleDTO;
 import at.fhv.TeamE.shared.dto.SaleHistoryDTO;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
+import javax.ejb.Remote;
 import java.util.List;
 import java.util.UUID;
 
-public interface RMI_SaleService extends Remote {
-    void purchase(UUID customerId, List<SaleDTO> salesDTO) throws RemoteException;
+@Remote
+public interface RMI_SaleService {
+    void purchase(UUID customerId, List<SaleDTO> salesDTO);
 
     //ToDo: idk just to fix versionNR...
-    void refund(UUID customerId, UUID saleId, List<SaleDTO> salesDTO) throws RemoteException;
+    void refund(UUID customerId, UUID saleId, List<SaleDTO> salesDTO);
 
-    List<SaleHistoryDTO> getById(String searchString) throws RemoteException;
+    List<SaleHistoryDTO> getById(String searchString);
 
-    List<SaleHistoryDTO> saleHistoryFull() throws RemoteException;
-    List<SaleHistoryDTO> saleHistoryBy(String customerOrSaleId) throws RemoteException;
-    SaleHistoryDTO saleDetail(UUID saleId) throws RemoteException;
+    List<SaleHistoryDTO> saleHistoryFull();
+    List<SaleHistoryDTO> saleHistoryBy(String customerOrSaleId);
+    SaleHistoryDTO saleDetail(UUID saleId);
 }

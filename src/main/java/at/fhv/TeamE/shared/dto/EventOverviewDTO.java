@@ -2,8 +2,6 @@ package at.fhv.TeamE.shared.dto;
 
 
 import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
-import java.time.LocalDate;
 import java.util.Objects;
 import java.util.UUID;
 

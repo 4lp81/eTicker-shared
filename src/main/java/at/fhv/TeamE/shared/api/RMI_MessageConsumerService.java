@@ -2,18 +2,18 @@ package at.fhv.TeamE.shared.api;
 
 import at.fhv.TeamE.shared.dto.MessageDTO;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
+import javax.ejb.Remote;
 import java.util.List;
 
-public interface RMI_MessageConsumerService extends Remote {
+@Remote
+public interface RMI_MessageConsumerService {
 
     //ToDo: acknowledge message...
-    List<MessageDTO> getMessagesFromSubscribedTopics(String userName) throws RemoteException;
+    List<MessageDTO> getMessagesFromSubscribedTopics(String userName);
 
     //Für notification und so
-    void notifyUser(String userName, String message) throws RemoteException;
+    void notifyUser(String userName, String message);
 
-    void acknowledgeMessage(String userName, MessageDTO message) throws RemoteException;
+    void acknowledgeMessage(String userName, MessageDTO message);
 
 }
