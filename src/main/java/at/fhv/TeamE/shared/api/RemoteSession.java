@@ -4,7 +4,7 @@ package at.fhv.TeamE.shared.api;
 import javax.ejb.Remote;
 
 @Remote
-public interface RMI_Session {
+public interface RemoteSession {
     boolean authenticate(String username, String password);
 
     //ToDo: Add messaging in later stages
