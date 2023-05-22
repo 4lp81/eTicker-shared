@@ -8,6 +8,7 @@ public interface RemoteSession {
     boolean authenticate(String username, String password);
 
     //ToDo: change RMI_CustomerService in later stages
+    // Shit
     String username();
     RMI_CustomerService rmi_customerService();
 
