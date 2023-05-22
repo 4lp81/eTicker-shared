@@ -7,7 +7,7 @@ import javax.ejb.Remote;
 public interface RemoteSession {
     boolean authenticate(String username, String password);
 
-    //ToDo: Add messaging in later stages
+    //ToDo: change RMI_CustomerService in later stages
     String username();
     RMI_CustomerService rmi_customerService();
 
