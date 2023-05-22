@@ -6,7 +6,7 @@ import javax.ejb.Remote;
 import java.util.List;
 
 @Remote
-public interface RMI_EventService {
+public interface RemoteEventService {
     List<EventOverviewDTO> searchArtistOrEvent(String searchString);
     List<EventOverviewDTO> filterTheatre();
     List<EventOverviewDTO> filterConcert();
