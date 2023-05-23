@@ -7,8 +7,6 @@ import jakarta.ejb.Remote;
 public interface RemoteSession {
     boolean authenticate(String username, String password);
 
-    //ToDo: change RMI_CustomerService in later stages
-
     String username();
     RemoteCustomerService customerService();
 
