@@ -1,7 +1,7 @@
 package at.fhv.TeamE.shared.api;
 
 
-import javax.ejb.Remote;
+import jakarta.ejb.Remote;
 
 @Remote
 public interface RemoteSession {

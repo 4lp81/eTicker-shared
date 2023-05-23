@@ -1,6 +1,6 @@
 package at.fhv.TeamE.shared.api;
 
-import javax.ejb.Remote;
+import jakarta.ejb.Remote;
 import java.sql.Timestamp;
 
 @Remote

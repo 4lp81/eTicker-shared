@@ -3,7 +3,7 @@ package at.fhv.TeamE.shared.api;
 import at.fhv.TeamE.shared.dto.SaleDTO;
 import at.fhv.TeamE.shared.dto.SaleHistoryDTO;
 
-import javax.ejb.Remote;
+import jakarta.ejb.Remote;
 import java.util.List;
 import java.util.UUID;
 
