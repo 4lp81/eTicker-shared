@@ -5,6 +5,8 @@ import jakarta.ejb.Remote;
 
 @Remote
 public interface RemoteSession {
+
+    //ToDo: alles
     boolean authenticate(String username, String password);
 
     String username();
