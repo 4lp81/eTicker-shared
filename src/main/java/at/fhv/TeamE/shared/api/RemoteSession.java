@@ -10,7 +10,7 @@ public interface RemoteSession {
     //ToDo: change RMI_CustomerService in later stages
     // Shitshit
     String username();
-    RMI_CustomerService rmi_customerService();
+    RemoteCustomerService customerService();
 
     RemoteEventService eventService();
     RemoteSaleService saleService();
