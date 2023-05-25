@@ -11,6 +11,8 @@ import java.util.UUID;
 
 @Remote
 public interface RemoteCustomerService {
+
+    //Here was the issue
     List<CustomerOverviewDTO> searchCustomer(String searchString);
 
     CustomerOverviewDTO getCustomer(UUID customerId);
