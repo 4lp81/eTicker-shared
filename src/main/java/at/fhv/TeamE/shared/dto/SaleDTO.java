@@ -55,11 +55,11 @@ public class SaleDTO implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaleDTO saleDTO = (SaleDTO) o;
-        return Double.compare(saleDTO.price, price) == 0 && amountPurchased == saleDTO.amountPurchased && amountRefunded == saleDTO.amountRefunded && saleId.equals(saleDTO.saleId) && eventId.equals(saleDTO.eventId) && eventName.equals(saleDTO.eventName);
+        return Double.compare(saleDTO.price, price) == 0 && amountPurchased == saleDTO.amountPurchased && amountRefunded == saleDTO.amountRefunded && Objects.equals(saleId, saleDTO.saleId) && Objects.equals(eventId, saleDTO.eventId) && Objects.equals(eventName, saleDTO.eventName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(saleId, eventId, eventName, price, amountPurchased, amountPurchased);
+        return Objects.hash(saleId, eventId, eventName, price, amountPurchased, amountRefunded);
     }
 }
