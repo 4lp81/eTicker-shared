@@ -12,7 +12,7 @@ import java.util.UUID;
 @Remote
 public interface RemoteCustomerService {
 
-    //Here was the issue
+    //Here was the issue with the remote interface
     List<CustomerOverviewDTO> searchCustomer(String searchString);
 
     CustomerOverviewDTO getCustomer(UUID customerId);
