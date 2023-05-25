@@ -51,7 +51,7 @@ public class SaleDTO implements Serializable {
     }
 
 
-    //First issue was here - the equals method was not implemented correctly (amountPurchased and amountRefunded were not compared)
+    //First issue was here - the equals method was not implemented correctly (amountPurchased was in there 2 times)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
