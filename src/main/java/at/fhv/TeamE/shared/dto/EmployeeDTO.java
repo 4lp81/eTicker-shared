@@ -19,6 +19,13 @@ public class EmployeeDTO implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return "EmployeeDTO{" +
+                "username='" + username + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
