@@ -12,7 +12,7 @@ import java.util.UUID;
 public interface RemoteSaleService {
     void purchase(UUID customerId, List<SaleDTO> salesDTO);
 
-    //ToDo: idk just to fix versionNR...
+    //ToDo: idk just to fix versionNR..... maybe
     void refund(UUID customerId, UUID saleId, List<SaleDTO> salesDTO);
 
     List<SaleHistoryDTO> getById(String searchString);
