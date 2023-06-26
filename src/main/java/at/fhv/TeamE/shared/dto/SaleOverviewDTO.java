@@ -19,7 +19,7 @@ public class SaleOverviewDTO implements Serializable {
 
     //
 
-    public SaleOverviewDTO(UUID customerId, UUID saleId, String firstname, String lastName, String email, List<SaleDTO> salesDTO) {
+    public SaleOverviewDTO(UUID customerId, UUID saleId, String firstname, String lastName, String email) {
         this.customerId = customerId;
         this.saleId = saleId;
         this.firstname = firstname;
