@@ -17,6 +17,7 @@ public class SaleOverviewDTO implements Serializable {
 
     private String email;
 
+    //
 
     public SaleOverviewDTO(UUID customerId, UUID saleId, String firstname, String lastName, String email, List<SaleDTO> salesDTO) {
         this.customerId = customerId;
