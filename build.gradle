@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'maven-publish'
+
 }
 
 group 'org.example'
@@ -7,6 +9,22 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'at.fhv.TeamE'
+            artifactId = 'sample'
+            version = "1.0-SNAPSHOT"
+            from components.java
+
+            pom {
+                description = 'A description of my library'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -20,6 +38,9 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
+
+
 test {
     useJUnitPlatform()
 }
+
