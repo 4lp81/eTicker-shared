@@ -3,6 +3,7 @@ package at.fhv.TeamE.shared.api;
 import at.fhv.TeamE.shared.dto.SaleDTO;
 import at.fhv.TeamE.shared.dto.SaleHistoryDTO;
 
+import at.fhv.TeamE.shared.dto.SaleOverviewDTO;
 import jakarta.ejb.Remote;
 import java.util.List;
 import java.util.UUID;
@@ -17,6 +18,6 @@ public interface RemoteSaleService {
     List<SaleHistoryDTO> getById(String searchString);
 
     List<SaleHistoryDTO> saleHistoryFull();
-    List<SaleHistoryDTO> saleHistoryBy(String customerOrSaleId);
+    List<SaleOverviewDTO> saleHistoryBy(String customerOrSaleId);
     SaleHistoryDTO saleDetail(UUID saleId);
 }
