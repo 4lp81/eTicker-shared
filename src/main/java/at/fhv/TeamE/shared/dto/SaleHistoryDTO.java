@@ -1,6 +1,7 @@
 package at.fhv.TeamE.shared.dto;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -21,13 +22,13 @@ public class SaleHistoryDTO implements Serializable {
     private int amount;
     private UUID productId;
 
-    private SaleDTO sales;
+    private List<SaleDTO> sales;
 
     public SaleHistoryDTO() {
 
     }
 
-    public SaleHistoryDTO( UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, String salePrice, String eventName, int amount, UUID productId,SaleDTO sales) {
+    public SaleHistoryDTO( UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, String salePrice, String eventName, int amount, UUID productId,List<SaleDTO> sales) {
         this.saleId = saleId;
         this.customerId = customerId;
         this.firstName = firstName;
@@ -106,14 +107,16 @@ public class SaleHistoryDTO implements Serializable {
         return amount;
     }
 
-    public SaleDTO getSaleDTO(){return sales;};
+    public List<SaleDTO> sales() {
+        return sales;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaleHistoryDTO that = (SaleHistoryDTO) o;
-        return amount == that.amount && saleId.equals(that.saleId) && customerId.equals(that.customerId) && firstName.equals(that.firstName) && lastName.equals(that.lastName) && iban.equals(that.iban) && birthDate.equals(that.birthDate) && email.equals(that.email) && address.equals(that.address) && city.equals(that.city) && country.equals(that.country) && saleDate.equals(that.saleDate) && salePrice.equals(that.salePrice) && eventName.equals(that.eventName) && productId.equals(that.productId) && sales.equals(that.sales);
+        return amount == that.amount && Objects.equals(saleId, that.saleId) && Objects.equals(customerId, that.customerId) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(iban, that.iban) && Objects.equals(birthDate, that.birthDate) && Objects.equals(email, that.email) && Objects.equals(address, that.address) && Objects.equals(city, that.city) && Objects.equals(country, that.country) && Objects.equals(saleDate, that.saleDate) && Objects.equals(salePrice, that.salePrice) && Objects.equals(eventName, that.eventName) && Objects.equals(productId, that.productId) && Objects.equals(sales, that.sales);
     }
 
     @Override
