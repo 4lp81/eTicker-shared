@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+//for the sale overview
+
 public class SaleOverviewDTO implements Serializable {
     private UUID customerId;
 
