@@ -28,14 +28,14 @@ public class SaleHistoryDTO implements Serializable {
 
     private CustomerOverviewDTO customer;
 
-    private List<Object> lines;
+    private String lines;
 
 
     public SaleHistoryDTO() {
 
     }
 
-    public SaleHistoryDTO(UUID saleId, String firstName, String lastName, String iban, String email, double totalSales, List<Object> lines, CustomerOverviewDTO customer){
+    public SaleHistoryDTO(UUID saleId, String firstName, String lastName, String iban, String email, double totalSales, String lines, CustomerOverviewDTO customer){
         this.saleId = saleId;
         this.firstName = firstName;
         this.lastName = lastName;
