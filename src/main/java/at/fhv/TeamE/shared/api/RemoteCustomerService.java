@@ -1,5 +1,6 @@
 package at.fhv.TeamE.shared.api;
 
+import at.fhv.TeamE.shared.dto.AccountInfoDTO;
 import at.fhv.TeamE.shared.dto.CustomerOverviewDTO;
 
 
@@ -16,4 +17,8 @@ public interface RemoteCustomerService {
     List<CustomerOverviewDTO> searchCustomer(String searchString);
 
     CustomerOverviewDTO getCustomer(UUID customerId);
+
+    List<AccountInfoDTO> accountInfo();
+
+
 }
