@@ -51,9 +51,7 @@ public class EventOverviewDTO implements Serializable {
 
     public String getDescription() {
         return description;
-//        byte[] descriptionBytes = description.getBytes(StandardCharsets.UTF_8);
-//        return new String(descriptionBytes, StandardCharsets.UTF_8);
-    }
+ }
 
     public String getDate() {
         return date;
