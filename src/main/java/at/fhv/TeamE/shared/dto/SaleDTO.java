@@ -5,19 +5,15 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class SaleDTO implements Serializable {
-    private UUID saleId;
+    private UUID saleId; // This ID is the same for all items in a single sale
     private UUID eventId;
     private String eventName;
     private double price;
     private int amountPurchased;
-
     private int amountRefunded;
 
-    public SaleDTO(){
 
-    }
-
-    public SaleDTO(UUID saleId, UUID eventId, String eventName, double price, int amountPurchased, int amountRefunded) {
+    public SaleDTO(UUID saleId, UUID itemId, UUID eventId, String eventName, double price, int amountPurchased, int amountRefunded) {
         this.saleId = saleId;
         this.eventId = eventId;
         this.eventName = eventName;
@@ -25,6 +21,11 @@ public class SaleDTO implements Serializable {
         this.amountPurchased = amountPurchased;
         this.amountRefunded = amountRefunded;
     }
+
+    public SaleDTO() {
+
+    }
+
 
     public UUID getSaleId() {
         return saleId;
@@ -42,6 +43,8 @@ public class SaleDTO implements Serializable {
         return price;
     }
 
+
+
     public int getAmountPurchased() {
         return amountPurchased;
     }
@@ -52,6 +55,7 @@ public class SaleDTO implements Serializable {
 
 
     //First issue was here - the equals method was not implemented correctly (amountPurchased was in there 2 times)
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -65,3 +69,4 @@ public class SaleDTO implements Serializable {
         return Objects.hash(saleId, eventId, eventName, price, amountPurchased, amountRefunded);
     }
 }
+
