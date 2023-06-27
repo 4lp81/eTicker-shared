@@ -20,5 +20,4 @@ public interface RemoteSaleService {
     List<SaleOverviewDTO> saleHistoryFull();
     List<SaleOverviewDTO> saleHistoryBy(String customerOrSaleId);
     SaleHistoryDTO saleDetail(UUID saleId);
-
 }
