@@ -17,7 +17,7 @@ public interface RemoteSaleService {
 
     List<SaleHistoryDTO> getById(String searchString);
 
-    List<SaleHistoryDTO> saleHistoryFull();
+    List<SaleOverviewDTO> saleHistoryFull();
     List<SaleOverviewDTO> saleHistoryBy(String customerOrSaleId);
     SaleHistoryDTO saleDetail(UUID saleId);
 }
