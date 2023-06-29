@@ -1,7 +1,6 @@
 package at.fhv.TeamE.shared.dto;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -24,28 +23,9 @@ public class SaleHistoryDTO implements Serializable {
 
     private SaleDTO sales;
 
-    private double totalSales;
-
-    private CustomerOverviewDTO customer;
-
-    private String lines;
-
-
     public SaleHistoryDTO() {
 
     }
-
-    public SaleHistoryDTO(UUID saleId, String firstName, String lastName, String iban, String email, double totalSales, String lines, CustomerOverviewDTO customer){
-        this.saleId = saleId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.iban = iban;
-        this.totalSales = totalSales;
-        this.lines = lines;
-        this.customer = customer;
-    }
-
 
     public SaleHistoryDTO( UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, String salePrice, String eventName, int amount, UUID productId,SaleDTO sales) {
         this.saleId = saleId;
