@@ -10,7 +10,7 @@ public interface RemoteSession {
     boolean authenticate(String username, String password);
 
     String username();
-    RemoteCustomerService customerService();
+    RMI_CustomerService rmi_customerService();
 
     RemoteEventService eventService();
     RemoteSaleService saleService();
