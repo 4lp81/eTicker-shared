@@ -14,7 +14,6 @@ public interface RemoteSession {
 
     RemoteEventService eventService();
     RemoteSaleService saleService();
-
     RemoteEmployeeService employeeService();
 
     RemoteMessageConsumerService messageConsumerService();
