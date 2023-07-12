@@ -19,6 +19,5 @@ public interface RemoteSession {
 
     RemoteMessageConsumerService messageConsumerService();
     RemoteMessagePublisherService messagePublisherService();
-
     RemoteCustomerService customerService();
 }
