@@ -50,6 +50,13 @@ public class SaleDTO implements Serializable {
         return amountRefunded;
     }
 
+    public void setAmountPurchased(int amountPurchased){
+        this.amountPurchased=amountPurchased;
+    }
+    public void setAmountRefunded(int amountRefunded){
+        this.amountRefunded=amountRefunded;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
