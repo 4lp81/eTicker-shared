@@ -27,12 +27,14 @@ public class SaleHistoryDTO implements Serializable {
 
     private SaleDTO sales;
 
+    private Boolean alreadyRefunded;
+
     public SaleHistoryDTO() {
 
     }
 
 
-    public SaleHistoryDTO( UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, String salePrice, String eventName, int amount, UUID productId,SaleDTO sales,SaleType saleType) {
+    public SaleHistoryDTO( UUID saleId, UUID customerId, String firstName, String lastName, String iban, String birthDate, String email, String address, String city, String country, String saleDate, String salePrice, String eventName, int amount, UUID productId,SaleDTO sales,SaleType saleType, Boolean alreadyRefunded) {
         this.saleId = saleId;
         this.customerId = customerId;
         this.firstName = firstName;
@@ -50,6 +52,7 @@ public class SaleHistoryDTO implements Serializable {
         this.productId = productId;
         this.sales = sales;
         this.saleType=saleType;
+        this.alreadyRefunded=alreadyRefunded;
     }
 
 
@@ -121,16 +124,24 @@ public class SaleHistoryDTO implements Serializable {
 
     public SaleType getSaleType(){return saleType;}
 
+    public void setAlreadyRefunded(Boolean alreadyRefunded) {
+        alreadyRefunded = alreadyRefunded;
+    }
+
+    public Boolean getAlreadyRefunded() {
+        return alreadyRefunded;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaleHistoryDTO that = (SaleHistoryDTO) o;
-        return amount == that.amount && Objects.equals(saleId, that.saleId) && Objects.equals(customerId, that.customerId) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(iban, that.iban) && Objects.equals(birthDate, that.birthDate) && Objects.equals(email, that.email) && Objects.equals(address, that.address) && Objects.equals(city, that.city) && Objects.equals(country, that.country) && Objects.equals(saleDate, that.saleDate) && Objects.equals(salePrice, that.salePrice) && Objects.equals(eventName, that.eventName) && Objects.equals(productId, that.productId) && saleType == that.saleType && Objects.equals(sales, that.sales);
+        return amount == that.amount && Objects.equals(saleId, that.saleId) && Objects.equals(customerId, that.customerId) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(iban, that.iban) && Objects.equals(birthDate, that.birthDate) && Objects.equals(email, that.email) && Objects.equals(address, that.address) && Objects.equals(city, that.city) && Objects.equals(country, that.country) && Objects.equals(saleDate, that.saleDate) && Objects.equals(salePrice, that.salePrice) && Objects.equals(eventName, that.eventName) && Objects.equals(productId, that.productId) && saleType == that.saleType && Objects.equals(sales, that.sales) && Objects.equals(alreadyRefunded, that.alreadyRefunded);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(saleId, customerId, firstName, lastName, iban, birthDate, email, address, city, country, saleDate, salePrice, eventName, amount, productId, saleType, sales);
+        return Objects.hash(saleId, customerId, firstName, lastName, iban, birthDate, email, address, city, country, saleDate, salePrice, eventName, amount, productId, saleType, sales, alreadyRefunded);
     }
 }
