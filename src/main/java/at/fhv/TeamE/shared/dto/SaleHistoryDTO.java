@@ -55,6 +55,7 @@ public class SaleHistoryDTO implements Serializable {
         this.alreadyRefunded=alreadyRefunded;
     }
 
+
     public UUID getSaleId() {
         return saleId;
     }
